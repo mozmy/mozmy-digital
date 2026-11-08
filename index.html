@@ -2,120 +2,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mozmy Digital creates modern, affordable and professional websites for businesses.">
-  <title>Mozmy Digital | Website Development</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b18">
+<meta name="description" content="Mozmy Digital provides professional website development, landing pages and digital solutions for businesses in Malaysia.">
+<title>Mozmy Digital | Websites That Grow Business</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #090d18;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: 90%; max-width: 1100px; margin: auto; }
+<style>
+:root {
+  --bg: #070b18;
+  --panel: #101a30;
+  --blue: #168cff;
+  --cyan: #00d9ff;
+  --white: #f8fafc;
+  --muted: #9aa9bf;
+  --border: rgba(148,163,184,.16);
+}
+* {margin:0;padding:0;box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.7;
+}
+a {text-decoration:none;color:inherit}
+.container {width:90%;max-width:1160px;margin:auto}
 
-    header {
-      padding: 22px 0;
-      border-bottom: 1px solid #263247;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo { font-size: 26px; font-weight: 800; }
-    .logo span { color: #38bdf8; }
-    .nav-links { display: flex; gap: 25px; color: #cbd5e1; }
+header {
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(7,11,24,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+nav {
+  min-height:76px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand {
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.brand span {color:var(--cyan)}
+.nav-links {display:flex;gap:30px;color:var(--muted);font-size:14px}
+.nav-links a:hover {color:var(--cyan)}
+.nav-cta {
+  background:var(--blue);
+  padding:10px 18px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:bold;
+}
 
-    .hero { padding: 110px 0 95px; text-align: center; }
-    .tag {
-      display: inline-block;
-      padding: 8px 17px;
-      border: 1px solid #334155;
-      border-radius: 30px;
-      color: #7dd3fc;
-      font-size: 13px;
-      margin-bottom: 25px;
-    }
-    h1 {
-      font-size: clamp(38px, 7vw, 68px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-    }
-    h1 span { color: #38bdf8; }
-    .hero p {
-      color: #94a3b8;
-      max-width: 650px;
-      margin: 22px auto 32px;
-      font-size: 17px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 25px;
-      background: #0284c7;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: .2s;
-    }
-    .btn:hover { background: #0369a1; transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #475569;
-      margin-left: 10px;
-    }
+.hero {
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  padding:80px 0;
+  background:
+    radial-gradient(ellipse at 50% 35%,rgba(0,117,255,.16),transparent 60%);
+}
+.hero-inner {max-width:850px;margin:auto}
+.hero-logo {
+  display:block;
+  width:min(340px,85%);
+  height:auto;
+  margin:0 auto 28px;
+}
+.tag {
+  display:inline-block;
+  border:1px solid rgba(0,217,255,.35);
+  color:var(--cyan);
+  padding:7px 16px;
+  border-radius:30px;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:24px;
+}
+h1 {
+  font-size:clamp(38px,7vw,68px);
+  line-height:1.13;
+  letter-spacing:-2px;
+}
+.gradient {
+  background:linear-gradient(90deg,#fff,#36b7ff,#00e1ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p {
+  max-width:670px;
+  color:var(--muted);
+  margin:22px auto 32px;
+  font-size:17px;
+}
+.btn {
+  display:inline-block;
+  background:linear-gradient(100deg,#0879ec,#00b9e8);
+  color:white;
+  padding:14px 24px;
+  border-radius:8px;
+  font-weight:bold;
+  transition:.25s;
+}
+.btn:hover {transform:translateY(-3px);filter:brightness(1.15)}
+.btn-outline {
+  background:transparent;
+  border:1px solid #40516e;
+  margin-left:10px;
+}
+section {padding:85px 0}
+.section-heading {text-align:center;margin-bottom:45px}
+.section-heading h2 {font-size:35px;line-height:1.3}
+.section-heading p {color:var(--muted);margin-top:12px}
 
-    section { padding: 75px 0; }
-    .section-title { text-align: center; margin-bottom: 40px; }
-    .section-title h2 { font-size: 34px; margin-bottom: 10px; }
-    .section-title p { color: #94a3b8; }
+.services-grid,.pricing-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  background:linear-gradient(145deg,#111d34,#0d1528);
+  border:1px solid var(--border);
+  padding:30px;
+  border-radius:15px;
+  transition:.25s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  border-color:rgba(0,190,255,.5);
+}
+.icon-box {
+  font-size:30px;
+  margin-bottom:16px;
+}
+.card h3 {font-size:20px;margin-bottom:10px}
+.card p {color:var(--muted);font-size:14px}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .card {
-      padding: 28px;
-      background: #111827;
-      border: 1px solid #263247;
-      border-radius: 14px;
-    }
-    .symbol { font-size: 32px; margin-bottom: 15px; }
-    .card h3 { margin-bottom: 10px; }
-    .card p { color: #94a3b8; font-size: 14px; }
+.about {
+  background:#0b1428;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.about-content {max-width:780px;margin:auto;text-align:center}
+.about-content p {color:var(--muted);margin-top:18px}
 
-    .about { background: #0f172a; }
-    .about-content {
-      max-width: 760px;
-      margin: auto;
-      text-align: center;
-    }
-    .about-content p { color: #94a3b8; margin-top: 15px; }
+.pricing-card {position:relative}
+.pricing-card.featured {
+  border-color:var(--blue);
+  box-shadow:0 0 30px rgba(0,120,255,.12);
+}
+.plan-label {
+  display:inline-block;
+  color:var(--cyan);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+.price {font-size:27px;font-weight:800;margin:14px 0}
+.price small {font-size:13px;color:var(--muted);font-weight:normal}
+.features {
+  list-style:none;
+  margin:20px 0 25px;
+  color:var(--muted);
+  font-size:14px;
+}
+.features li {padding:7px 0}
+.features li::before {content:"✓ ";color:var(--cyan);font-weight:bold}
 
-    .contact { text-align: center; }
-    .contact p { color: #94a3b8; margin: 15px 0 25px; }
+.steps {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.step {text-align:center;padding:20px 12px}
+.step-number {
+  width:48px;height:48px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  margin:0 auto 16px;
+  background:#102a4d;
+  border:1px solid #167be7;
+  color:var(--cyan);
+  font-weight:bold;
+}
+.step p {font-size:13px;color:var(--muted);margin-top:7px}
 
-    footer {
-      padding: 25px 0;
-      text-align: center;
-      color: #64748b;
-      border-top: 1px solid #263247;
-      font-size: 13px;
-    }
+.contact {
+  text-align:center;
+  background:radial-gradient(ellipse at center,rgba(0,110,255,.15),transparent 70%);
+}
+.contact p {color:var(--muted);margin:15px 0 28px}
 
-    @media(max-width: 700px) {
-      .nav-links { display: none; }
-      .cards { grid-template-columns: 1fr; }
-      .hero { padding: 75px 0; }
-      .btn-outline { margin: 12px 0 0; }
-      .section-title h2 { font-size: 28px; }
-    }
-  </style>
+footer {
+  border-top:1px solid var(--border);
+  padding:35px 0;
+  text-align:center;
+}
+.footer-logo {
+  width:160px;
+  max-width:60%;
+  height:auto;
+  margin-bottom:10px;
+}
+footer p {font-size:12px;color:var(--muted)}
+
+.whatsapp-float {
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  z-index:200;
+  background:#16c66b;
+  color:white;
+  padding:13px 19px;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:bold;
+  box-shadow:0 5px 25px rgba(0,0,0,.3);
+}
+
+@media(max-width:750px) {
+  .nav-links {display:none}
+  .nav-cta {font-size:12px;padding:9px 12px}
+  .hero {min-height:570px;padding:65px 0}
+  .hero-logo {width:min(280px,85%)}
+  .services-grid,.pricing-grid {grid-template-columns:1fr}
+  .steps {grid-template-columns:repeat(2,1fr)}
+  section {padding:65px 0}
+  .section-heading h2 {font-size:29px}
+  .btn-outline {margin:12px 0 0}
+}
+</style>
 </head>
 
 <body>
@@ -123,100 +248,241 @@
 <header>
   <div class="container">
     <nav>
-      <a class="logo" href="#">MOZMY<span>.</span></a>
+      <a class="brand" href="#">MOZMY<span>.</span></a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
+        <a href="#pricing">Packages</a>
         <a href="#contact">Contact</a>
       </div>
+      <a class="nav-cta" href="https://wa.me/60146424764">Let's Talk ↗</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section class="hero">
-    <div class="container">
-      <div class="tag">✦ DIGITAL SOLUTIONS FOR BUSINESSES</div>
+<section class="hero">
+  <div class="container hero-inner">
 
-      <h1>
-        Build Your Business<br>
-        With <span>Better Websites.</span>
-      </h1>
+    <img class="hero-logo"
+         src="mozmy-logo.png"
+         alt="Mozmy Digital Solutions Logo">
 
-      <p>
-        We create modern, professional and affordable websites
-        that help businesses build trust, reach customers and grow online.
-      </p>
+    <div class="tag">DIGITAL SOLUTIONS FOR BUSINESSES</div>
 
-      <a class="btn" href="#contact">Start Your Project →</a>
-      <a class="btn btn-outline" href="#services">Explore Services</a>
+    <h1>
+      Your Business Deserves<br>
+      A <span class="gradient">Better Website.</span>
+    </h1>
+
+    <p>
+      We build modern, professional and affordable websites
+      that help businesses establish their online presence,
+      attract customers and grow with confidence.
+    </p>
+
+    <a class="btn" href="#contact">Start Your Project →</a>
+    <a class="btn btn-outline" href="#services">Explore Services</a>
+
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Our <span class="gradient">Services</span></h2>
+      <p>Practical digital solutions designed for your business.</p>
     </div>
-  </section>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>What We Do</h2>
-        <p>Simple digital solutions to move your business forward.</p>
+    <div class="services-grid">
+
+      <div class="card">
+        <div class="icon-box">🌐</div>
+        <h3>Business Website</h3>
+        <p>Build your professional business identity with a website that introduces your company, services and contact information.</p>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <div class="symbol">🌐</div>
-          <h3>Business Website</h3>
-          <p>Professional websites to introduce your company, services and business identity.</p>
-        </div>
+      <div class="card">
+        <div class="icon-box">🚀</div>
+        <h3>Landing Page</h3>
+        <p>Present your products, promotions and services through a focused page designed to generate customer inquiries.</p>
+      </div>
 
-        <div class="card">
-          <div class="symbol">🚀</div>
-          <h3>Landing Page</h3>
-          <p>Focused landing pages designed to showcase offers and generate customer inquiries.</p>
-        </div>
+      <div class="card">
+        <div class="icon-box">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Enjoy a consistent browsing experience across mobile phones, tablets and desktop devices.</p>
+      </div>
 
-        <div class="card">
-          <div class="symbol">📱</div>
-          <h3>Mobile Responsive</h3>
-          <p>Beautiful website experiences for mobile, tablet and desktop devices.</p>
-        </div>
+      <div class="card">
+        <div class="icon-box">🛠️</div>
+        <h3>Website Maintenance</h3>
+        <p>Keep your website updated with content changes, improvements and ongoing support.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box">🎨</div>
+        <h3>Website Redesign</h3>
+        <p>Give your existing website a fresh, modern look that better represents your business.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box">💬</div>
+        <h3>WhatsApp Integration</h3>
+        <p>Make it easier for visitors to contact your business directly through WhatsApp.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-content">
+
+    <div class="section-heading">
+      <h2>Digital Made <span class="gradient">Simple.</span></h2>
+    </div>
+
+    <p>
+      Mozmy Digital is a website development and digital solutions
+      brand dedicated to helping entrepreneurs, startups and
+      small businesses build a strong online presence.
+    </p>
+
+    <p>
+      We believe every business deserves a professional digital
+      identity without unnecessary complexity or expensive setup.
+    </p>
+
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Website <span class="gradient">Packages</span></h2>
+      <p>Choose a solution that fits your business needs.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="card pricing-card">
+        <div class="plan-label">STARTER</div>
+        <h3>Landing Page</h3>
+        <p>Perfect for individuals and small businesses starting online.</p>
+        <div class="price">Get a Quote</div>
+        <ul class="features">
+          <li>Single page website</li>
+          <li>Mobile responsive</li>
+          <li>Business information</li>
+          <li>WhatsApp button</li>
+          <li>Basic SEO setup</li>
+        </ul>
+        <a class="btn" href="https://wa.me/60146424764?text=Hi%20Mozmy%2C%20I%20am%20interested%20in%20the%20Starter%20package.">Enquire Now</a>
+      </div>
+
+      <div class="card pricing-card featured">
+        <div class="plan-label">BUSINESS</div>
+        <h3>Business Website</h3>
+        <p>For growing businesses that need a stronger online identity.</p>
+        <div class="price">Get a Quote</div>
+        <ul class="features">
+          <li>Multiple website sections</li>
+          <li>Mobile responsive</li>
+          <li>Services and gallery</li>
+          <li>WhatsApp integration</li>
+          <li>Basic SEO setup</li>
+        </ul>
+        <a class="btn" href="https://wa.me/60146424764?text=Hi%20Mozmy%2C%20I%20am%20interested%20in%20the%20Business%20package.">Enquire Now</a>
+      </div>
+
+      <div class="card pricing-card">
+        <div class="plan-label">PREMIUM</div>
+        <h3>Custom Website</h3>
+        <p>For businesses requiring more tailored website features.</p>
+        <div class="price">Custom Quote</div>
+        <ul class="features">
+          <li>Custom design</li>
+          <li>Advanced sections</li>
+          <li>Custom integrations</li>
+          <li>Responsive layout</li>
+          <li>Project-based support</li>
+        </ul>
+        <a class="btn" href="https://wa.me/60146424764?text=Hi%20Mozmy%2C%20I%20would%20like%20a%20custom%20website.">Enquire Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>How We <span class="gradient">Work</span></h2>
+      <p>A simple and transparent process from start to launch.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Consultation</h3>
+        <p>Understand your business and requirements.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Design</h3>
+        <p>Plan and create your website design.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Development</h3>
+        <p>Build and review your website.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Launch</h3>
+        <p>Publish your website and go online.</p>
       </div>
     </div>
-  </section>
 
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-content">
-        <h2>Digital Made Simple.</h2>
-        <p>
-          Mozmy Digital helps entrepreneurs, startups and small businesses
-          establish their online presence through practical and affordable
-          website solutions.
-        </p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Ready to Build Your Website?</h2>
-      <p>Tell us about your business and let's start your digital journey.</p>
-
-      <a class="btn"
-         href="https://wa.me/60146424764?text=Hi%20Mozmy%20Digital%2C%20I%20want%20to%20build%20a%20website."
-         target="_blank"
-         rel="noopener">
-        Chat With Us on WhatsApp
-      </a>
-    </div>
-  </section>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="tag">LET'S BUILD SOMETHING GREAT</div>
+    <h2>Ready to Grow Your Business Online?</h2>
+    <p>Tell us about your project. Let's create your digital presence together.</p>
+    <a class="btn"
+       href="https://wa.me/60146424764?text=Hi%20Mozmy%20Digital%2C%20I%20want%20to%20discuss%20a%20website%20project."
+       target="_blank" rel="noopener">
+       Chat With Mozmy →
+    </a>
+  </div>
+</section>
 
 </main>
 
 <footer>
   <div class="container">
-    © 2026 Mozmy Digital. All rights reserved.
+    <img class="footer-logo" src="mozmy-logo.png" alt="Mozmy Digital">
+    <p>WEBSITES | BRANDING | DIGITAL GROWTH</p>
+    <p style="margin-top:15px">© 2026 Mozmy Digital. All rights reserved.</p>
   </div>
 </footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/60146424764?text=Hi%20Mozmy%20Digital"
+   target="_blank" rel="noopener">
+   WhatsApp ↗
+</a>
 
 </body>
 </html>
