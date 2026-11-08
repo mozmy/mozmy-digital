@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mozmy Digital - Professional website development for businesses and entrepreneurs.">
+  <title>Mozmy Digital | Websites That Grow Business</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #090d18;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, 90%); margin: auto; }
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #20283a;
+    }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 25px; font-weight: 800; letter-spacing: -1px; }
+    .logo span { color: #38bdf8; }
+    .nav-links { display: flex; gap: 25px; font-size: 14px; color: #cbd5e1; }
+    .hero { padding: 105px 0 90px; text-align: center; }
+    .tag {
+      display: inline-block; padding: 8px 16px;
+      border: 1px solid #334155; border-radius: 30px;
+      color: #7dd3fc; font-size: 13px; margin-bottom: 25px;
+    }
+    h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.12; letter-spacing: -2px; }
+    h1 span { color: #38bdf8; }
+    .hero p {
+      color: #94a3b8; max-width: 620px;
+      margin: 22px auto 30px; font-size: 17px;
+    }
+    .btn {
+      display: inline-block; padding: 14px 25px;
+      background: #0284c7; border-radius: 8px;
+      font-weight: 700; transition: .2s;
+    }
+    .btn:hover { background: #0369a1; transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; border: 1px solid #475569;
+      margin-left: 10px;
+    }
+    section { padding: 75px 0; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 34px; margin-bottom: 10px; }
+    .section-title p { color: #94a3b8; }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .card {
+      padding: 28px; background: #111827;
+      border: 1px solid #263247; border-radius: 14px;
+    }
+    .card .symbol { font-size: 30px; margin-bottom: 15px; }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: #94a3b8; font-size: 14px; }
+    .about { background: #0f172a; }
+    .about-content { max-width: 760px; margin: auto; text-align: center; }
+    .about-content p { color: #94a3b8; margin-top: 15px; }
+    .contact { text-align: center; }
+    .contact p { color: #94a3b8; margin: 15px 0 25px; }
+    footer {
+      padding: 25px 0; text-align: center;
+      color: #64748b; border-top: 1px solid #20283a;
+      font-size: 13px;
+    }
+    @media(max-width:700px) {
+      .nav-links { display: none; }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 75px 0; }
+      .btn-outline { margin: 12px 0 0; }
+      .section-title h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#">MOZMY<span>.</span></a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="tag">✦ DIGITAL SOLUTIONS FOR BUSINESSES</div>
+        <h1>Build Your Business<br>With <span>Better Websites.</span></h1>
+        <p>We create modern, professional and affordable websites that help businesses build trust, reach customers and grow online.</p>
+        <a class="btn" href="#contact">Start Your Project →</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>What We Do</h2>
+          <p>Simple digital solutions to move your business forward.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="symbol">🌐</div>
+            <h3>Business Website</h3>
+            <p>Professional websites to introduce your company, services and business identity.</p>
+          </div>
+          <div class="card">
+            <div class="symbol">🚀</div>
+            <h3>Landing Page</h3>
+            <p>Focused landing pages designed to showcase offers and generate customer inquiries.</p>
+          </div>
+          <div class="card">
+            <div class="symbol">📱</div>
+            <h3>Mobile Responsive</h3>
+            <p>Beautiful website experiences that work smoothly on mobile, tablet and desktop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>Digital Made Simple.</h2>
+          <p>Mozmy Digital helps entrepreneurs, startups and small businesses establish their online presence through practical and affordable website solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Ready to Build Your Website?</h2>
+        <p>Tell us about your business and let's start your digital journey.</p>
+        <a class="btn" href="https://wa.me/60123456789?text=Hi%20Mozmy%20Digital%2C%20I%20want%20to%20build%20a%20website." target="_blank" rel="noopener">Chat With Us on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Mozmy Digital. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
