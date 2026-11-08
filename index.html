@@ -18,14 +18,17 @@
   --muted: #9aa9bf;
   --border: rgba(148,163,184,.16);
 }
+
 * {margin:0;padding:0;box-sizing:border-box}
 html {scroll-behavior:smooth}
+
 body {
   font-family:Arial,sans-serif;
   background:var(--bg);
   color:var(--white);
   line-height:1.7;
 }
+
 a {text-decoration:none;color:inherit}
 .container {width:90%;max-width:1160px;margin:auto}
 
@@ -37,20 +40,46 @@ header {
   backdrop-filter:blur(15px);
   border-bottom:1px solid var(--border);
 }
+
 nav {
   min-height:76px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
+/* HEADER LOGO */
 .brand {
-  font-size:26px;
-  font-weight:900;
-  letter-spacing:2px;
+  display:flex;
+  align-items:center;
+  width:160px;
+  height:76px;
+  flex-shrink:0;
 }
-.brand span {color:var(--cyan)}
-.nav-links {display:flex;gap:30px;color:var(--muted);font-size:14px}
+
+.brand-logo {
+  display:block;
+  width:auto;
+  height:58px;
+  max-width:150px;
+  object-fit:contain;
+  object-position:left center;
+  transition:transform .25s ease;
+}
+
+.brand:hover .brand-logo {
+  transform:scale(1.04);
+}
+
+.nav-links {
+  display:flex;
+  gap:30px;
+  color:var(--muted);
+  font-size:14px;
+}
+
 .nav-links a:hover {color:var(--cyan)}
+
 .nav-cta {
   background:var(--blue);
   padding:10px 18px;
@@ -68,13 +97,16 @@ nav {
   background:
     radial-gradient(ellipse at 50% 35%,rgba(0,117,255,.16),transparent 60%);
 }
+
 .hero-inner {max-width:850px;margin:auto}
+
 .hero-logo {
   display:block;
   width:min(340px,85%);
   height:auto;
   margin:0 auto 28px;
 }
+
 .tag {
   display:inline-block;
   border:1px solid rgba(0,217,255,.35);
@@ -85,23 +117,27 @@ nav {
   letter-spacing:1px;
   margin-bottom:24px;
 }
+
 h1 {
   font-size:clamp(38px,7vw,68px);
   line-height:1.13;
   letter-spacing:-2px;
 }
+
 .gradient {
   background:linear-gradient(90deg,#fff,#36b7ff,#00e1ff);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
 }
+
 .hero p {
   max-width:670px;
   color:var(--muted);
   margin:22px auto 32px;
   font-size:17px;
 }
+
 .btn {
   display:inline-block;
   background:linear-gradient(100deg,#0879ec,#00b9e8);
@@ -111,22 +147,41 @@ h1 {
   font-weight:bold;
   transition:.25s;
 }
-.btn:hover {transform:translateY(-3px);filter:brightness(1.15)}
+
+.btn:hover {
+  transform:translateY(-3px);
+  filter:brightness(1.15);
+}
+
 .btn-outline {
   background:transparent;
   border:1px solid #40516e;
   margin-left:10px;
 }
+
 section {padding:85px 0}
-.section-heading {text-align:center;margin-bottom:45px}
-.section-heading h2 {font-size:35px;line-height:1.3}
-.section-heading p {color:var(--muted);margin-top:12px}
+
+.section-heading {
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-heading h2 {
+  font-size:35px;
+  line-height:1.3;
+}
+
+.section-heading p {
+  color:var(--muted);
+  margin-top:12px;
+}
 
 .services-grid,.pricing-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
+
 .card {
   background:linear-gradient(145deg,#111d34,#0d1528);
   border:1px solid var(--border);
@@ -134,30 +189,51 @@ section {padding:85px 0}
   border-radius:15px;
   transition:.25s;
 }
+
 .card:hover {
   transform:translateY(-5px);
   border-color:rgba(0,190,255,.5);
 }
+
 .icon-box {
   font-size:30px;
   margin-bottom:16px;
 }
-.card h3 {font-size:20px;margin-bottom:10px}
-.card p {color:var(--muted);font-size:14px}
+
+.card h3 {
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.card p {
+  color:var(--muted);
+  font-size:14px;
+}
 
 .about {
   background:#0b1428;
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
-.about-content {max-width:780px;margin:auto;text-align:center}
-.about-content p {color:var(--muted);margin-top:18px}
+
+.about-content {
+  max-width:780px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-content p {
+  color:var(--muted);
+  margin-top:18px;
+}
 
 .pricing-card {position:relative}
+
 .pricing-card.featured {
   border-color:var(--blue);
   box-shadow:0 0 30px rgba(0,120,255,.12);
 }
+
 .plan-label {
   display:inline-block;
   color:var(--cyan);
@@ -166,25 +242,48 @@ section {padding:85px 0}
   letter-spacing:1px;
   margin-bottom:12px;
 }
-.price {font-size:27px;font-weight:800;margin:14px 0}
-.price small {font-size:13px;color:var(--muted);font-weight:normal}
+
+.price {
+  font-size:27px;
+  font-weight:800;
+  margin:14px 0;
+}
+
+.price small {
+  font-size:13px;
+  color:var(--muted);
+  font-weight:normal;
+}
+
 .features {
   list-style:none;
   margin:20px 0 25px;
   color:var(--muted);
   font-size:14px;
 }
+
 .features li {padding:7px 0}
-.features li::before {content:"✓ ";color:var(--cyan);font-weight:bold}
+
+.features li::before {
+  content:"✓ ";
+  color:var(--cyan);
+  font-weight:bold;
+}
 
 .steps {
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:18px;
 }
-.step {text-align:center;padding:20px 12px}
+
+.step {
+  text-align:center;
+  padding:20px 12px;
+}
+
 .step-number {
-  width:48px;height:48px;
+  width:48px;
+  height:48px;
   border-radius:50%;
   display:grid;
   place-items:center;
@@ -194,26 +293,40 @@ section {padding:85px 0}
   color:var(--cyan);
   font-weight:bold;
 }
-.step p {font-size:13px;color:var(--muted);margin-top:7px}
+
+.step p {
+  font-size:13px;
+  color:var(--muted);
+  margin-top:7px;
+}
 
 .contact {
   text-align:center;
   background:radial-gradient(ellipse at center,rgba(0,110,255,.15),transparent 70%);
 }
-.contact p {color:var(--muted);margin:15px 0 28px}
+
+.contact p {
+  color:var(--muted);
+  margin:15px 0 28px;
+}
 
 footer {
   border-top:1px solid var(--border);
   padding:35px 0;
   text-align:center;
 }
+
 .footer-logo {
   width:160px;
   max-width:60%;
   height:auto;
   margin-bottom:10px;
 }
-footer p {font-size:12px;color:var(--muted)}
+
+footer p {
+  font-size:12px;
+  color:var(--muted);
+}
 
 .whatsapp-float {
   position:fixed;
@@ -229,15 +342,44 @@ footer p {font-size:12px;color:var(--muted)}
   box-shadow:0 5px 25px rgba(0,0,0,.3);
 }
 
+/* MOBILE RESPONSIVE */
 @media(max-width:750px) {
   .nav-links {display:none}
-  .nav-cta {font-size:12px;padding:9px 12px}
-  .hero {min-height:570px;padding:65px 0}
+
+  .brand {
+    width:125px;
+    height:70px;
+  }
+
+  .brand-logo {
+    height:48px;
+    max-width:120px;
+  }
+
+  .nav-cta {
+    font-size:12px;
+    padding:9px 12px;
+  }
+
+  .hero {
+    min-height:570px;
+    padding:65px 0;
+  }
+
   .hero-logo {width:min(280px,85%)}
-  .services-grid,.pricing-grid {grid-template-columns:1fr}
-  .steps {grid-template-columns:repeat(2,1fr)}
+
+  .services-grid,.pricing-grid {
+    grid-template-columns:1fr;
+  }
+
+  .steps {
+    grid-template-columns:repeat(2,1fr);
+  }
+
   section {padding:65px 0}
+
   .section-heading h2 {font-size:29px}
+
   .btn-outline {margin:12px 0 0}
 }
 </style>
@@ -248,14 +390,25 @@ footer p {font-size:12px;color:var(--muted)}
 <header>
   <div class="container">
     <nav>
-      <a class="brand" href="#">MOZMY<span>.</span></a>
+
+      <!-- NEW LOGO ON TOP LEFT -->
+      <a class="brand" href="#" aria-label="Mozmy Digital Home">
+        <img
+          class="brand-logo"
+          src="mozmy-logo.png?v=2"
+          alt="Mozmy Digital"
+        >
+      </a>
+
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#pricing">Packages</a>
         <a href="#contact">Contact</a>
       </div>
+
       <a class="nav-cta" href="https://wa.me/60146424764">Let's Talk ↗</a>
+
     </nav>
   </div>
 </header>
@@ -427,6 +580,7 @@ footer p {font-size:12px;color:var(--muted)}
     </div>
 
     <div class="steps">
+
       <div class="step">
         <div class="step-number">01</div>
         <h3>Consultation</h3>
@@ -450,8 +604,8 @@ footer p {font-size:12px;color:var(--muted)}
         <h3>Launch</h3>
         <p>Publish your website and go online.</p>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
@@ -460,6 +614,7 @@ footer p {font-size:12px;color:var(--muted)}
     <div class="tag">LET'S BUILD SOMETHING GREAT</div>
     <h2>Ready to Grow Your Business Online?</h2>
     <p>Tell us about your project. Let's create your digital presence together.</p>
+
     <a class="btn"
        href="https://wa.me/60146424764?text=Hi%20Mozmy%20Digital%2C%20I%20want%20to%20discuss%20a%20website%20project."
        target="_blank" rel="noopener">
